@@ -28,7 +28,7 @@ public class FraudulentActivityNotifications {
         int notifications = 0;
         int j = 0;
         for(int i=d; i<expenditure.length; i++) {
-//            System.out.println(i);
+//            System.out.println("i :" + i);
             double med = calculateMedian(medArr, d);
             changeInitialMed(medArr, expenditure, i, j);
             j++;

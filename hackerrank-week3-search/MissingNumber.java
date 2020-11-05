@@ -32,14 +32,24 @@ public class MissingNumber {
         for(int i=0; i<arr.length; i++) {
             brrList.remove(Integer.valueOf(arr[i]));
         }
+
         HashMap<Integer, Integer> brrMap = new HashMap<>();
         for(int i=0; i<brrList.size(); i++) {
-            int a = brrMap.getOrDefault(brrList.get(i), 0);
-            brrMap.put(brrList.get(i), a+1);
+            int key = brrList.get(i);
+
+            if(brrMap.get(key) == null) {
+                brrMap.put(key, 1);
+            } else {
+                int oldValue = brrMap.get(key);
+                brrMap.put(key, oldValue + 1);
+            }
+
         }
+
         for(Map.Entry me : brrMap.entrySet()) {
-            if((int)me.getValue() > 1) {
-                for(int i=0; i<(int)me.getValue()-1; i++) {
+            int value =(int)me.getValue();
+            if(value > 1) {
+                for(int i=0; i<value-1; i++) {
                     brrList.remove(Integer.valueOf((int)me.getKey()));
                 }
             }
