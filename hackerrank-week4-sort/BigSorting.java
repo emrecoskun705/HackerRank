@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class BigSorting {
     // Complete the bigSorting function below.
     static String[] bigSorting(String[] unsorted) {
+
         Arrays.sort(unsorted, new Comparator<String>() {
             @Override
             public int compare(String x, String y) {
@@ -53,6 +54,7 @@ public class BigSorting {
     }}
 
 class MyComparator implements Comparator<String> {
+
     public int compare(String x, String y) {
         if (x.length() == y.length()) {
             return x.compareTo(y);

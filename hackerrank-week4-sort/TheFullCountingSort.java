@@ -28,10 +28,12 @@ public class TheFullCountingSort {
 
         for(int i=0; i<answer.length; i++) {
             if(!answer[i].toString().equals(""))
-            System.out.print(answer[i].toString());
+                System.out.print(answer[i].toString());
         }
 
 
 
     }
+
+
 }
