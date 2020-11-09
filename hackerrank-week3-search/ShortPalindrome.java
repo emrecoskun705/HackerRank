@@ -8,6 +8,11 @@ public class ShortPalindrome {
         String s = scan.nextLine();
         char[] sArr = s.toCharArray();
 
+        //arr1 de herhangi bir harfi gördüüğümüzde 1 artırıyoruz
+        //arr2 de o harf kombinasyonunu her gördüğümüzde 1 aertırıyoruz mesela ab '[0][1]' +1 gibi
+        //arr3 de ise ne elimizde ab '[0][1]' var ise eğer abb şeklinde bi yol bulursak arr3  'ab' [0][1] 1 artıcak
+        //arr3 cevap ama ne zaman abb 'a' yı bulduğunda cevabı artıracak
+        
         int[] arr1 = new int[26];
         int[][] arr2 = new int[26][26];
         int[] arr3 = new int[26];
