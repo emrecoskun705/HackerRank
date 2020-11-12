@@ -1,30 +1,59 @@
+import javafx.scene.control.ListCell;
+
 import java.io.*;
 import java.util.*;
 import java.util.stream.IntStream;
 
-public class gfd {
 
-    //3,4,5
 
+class gfd{
     public static void main(String[] args) {
-        linkedList list1 = new linkedList(3);
-        linkedList list2 = new linkedList(4);
-        linkedList list3 = new linkedList(5);
-        list2.next = list3;
-        list1.next = list2;
-        System.out.println(list1.a);
-        System.out.println(list1.next.a);
-        System.out.println(list1.next.next.a);
+
+        Integer s = new Integer(24);
+        Integer p = new Integer(21);
+        Integer k = new Integer(10);
+
+
+        ListCel head =  new ListCel(s,
+                            new ListCel(p,
+                                    new ListCel(k, null)));
+        ListCel tail = head;
+        while (tail.getNext() != null) {
+            System.out.println(tail.getDatum());
+            tail = tail.getNext();
+        }
+        System.out.println(tail.getDatum());
+//        System.out.println(head.getDatum());
     }
 
+    static class ListCel{
+        private Integer i;
+        private ListCel next;
+
+        public ListCel(Integer i, ListCel next) {
+            this.i = i;
+            this.next = next;
+        }
+
+        public Integer getDatum() {
+            return i;
+        }
+
+        public ListCel getNext() {
+            return next;
+        }
+
+        public void setDatum(Integer i) {
+            this.i = i;
+        }
+
+        public void setNext(ListCel next) {
+            this.next = next;
+        }
+    }
 
 }
 
-class linkedList {
-    int a;
-    linkedList next;
 
-    public linkedList(int a) {
-        this.a = a;
-    }
-}
+
+
