@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/hackerrank-week4-sort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/training" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sorting" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
